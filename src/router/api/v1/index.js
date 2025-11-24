@@ -10,3 +10,4 @@ const project = require("./project.routes");
 router.use("/project", project);
 
 module.exports = router;
+
