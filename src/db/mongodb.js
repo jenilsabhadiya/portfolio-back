@@ -15,4 +15,6 @@ const connectMongodbURL = async () => {
   }
 };
 
+console.log(process.env.MONGO_URL);
+
 module.exports = connectMongodbURL;
