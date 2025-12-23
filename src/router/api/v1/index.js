@@ -5,9 +5,10 @@ const router = express.Router();
 
 // const categary = require("./categary.router");
 const project = require("./project.routes");
+const contact = require("./contact");
 
 // router.use("/category", categary);
 router.use("/project", project);
+router.use("/contact", contact);
 
 module.exports = router;
-
