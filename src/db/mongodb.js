@@ -13,8 +13,6 @@ const connectMongodbURL = async () => {
   } catch (error) {
     console.log(error);
   }
-};
-
-console.log(process.env.MONGO_URL);
+}; 
 
 module.exports = connectMongodbURL;
