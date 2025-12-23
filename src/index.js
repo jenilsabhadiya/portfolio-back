@@ -14,7 +14,10 @@ connectMongodbURL();
 // CORS
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://portfolio-lovat-seven-nuemyogf7z.vercel.app/",
+    ],
     credentials: true,
   })
 );
