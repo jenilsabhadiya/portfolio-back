@@ -93,18 +93,29 @@ export const getProjects = async (req, res) => {
 
 // ➤ Get a single project
 export const getProjectById = async (req, res) => {
+  console.log("Get a single projects");
+
   try {
-    const project = await Project.findOne({ id: req.params.id });
+    const { id } = req.params;
+
+    const project = await Project.findById(id);
+
     if (!project) {
-      res.status(404).json({
+      return res.status(404).json({
         success: false,
-        data: [],
         message: "Project not found",
       });
     }
-    res.status(200).json({ success: true, data: project });
+
+    return res.status(200).json({
+      success: true,
+      data: project,
+    });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message });
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
   }
 };
 

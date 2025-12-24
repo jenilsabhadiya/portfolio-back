@@ -10,7 +10,7 @@ const sentMail = async (to, subject, text) => {
         pass: process.env.NODEMAILER_PASS,
       },
       tls: {
-        rejectUnauthorized: false, // do not fail on invalid certs
+        rejectUnauthorized: false,
       },
     });
 
