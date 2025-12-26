@@ -2,7 +2,7 @@ const express = require("express");
 const { ProjectController } = require("../../../controller");
 const upload = require("../../../middleware/upload");
 const router = express.Router();
-
+ 
 router.post(
   "/create-project",
   upload.single("project_image"), // <-- FIX HERE
