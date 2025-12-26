@@ -74,7 +74,7 @@ export const createProject = async (req, res) => {
   console.log("Done!");
 };
 
-// ➤ Get all projects
+// ➤ Get all projects 
 export const getProjects = async (req, res) => {
   try {
     const projects = await Project.find();
